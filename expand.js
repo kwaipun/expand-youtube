@@ -22,10 +22,9 @@
     }
 
     function openVideo(elem,player){
-        console.log(player);
         var videoLink = elem.find('.yt-uix-sessionlink.spf-link');
         var embedUrl = 'https://www.youtube.com/embed/' + (videoLink.attr('href')).substring(9) + '?autoplay=1';
-        var embed = '<iframe type="text/html" width="640" height="390" src="'+ embedUrl +'"frameborder="0" allowfullscreen/>';
+        var embed = '<iframe class="embed-frame" type="text/html" width="640" height="390" src="'+ embedUrl +'"frameborder="0" allowfullscreen/>';
         if (clicked){
             clicked = false;
             player.empty();
