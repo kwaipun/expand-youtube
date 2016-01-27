@@ -34,6 +34,7 @@
         } else{
             clicked = true;
             player[0].style.height = '400px';
+            player.html('Collapse');
             player.append(embed);
             $(player.children()[0]).offset(centerPosition);
         }
