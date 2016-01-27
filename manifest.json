@@ -3,7 +3,7 @@
 
     "name": "expand-youtube",
     "description":"expand youtube videos to view from the subscriptions page",
-    "version":"0.1",
+    "version":"0.1.1",
     "author":"Christopher Kwai-Pun",
     "icons": {
         "24":"/assets/icons/icon1x.png",
@@ -12,7 +12,7 @@
 
     "content_scripts": [
         {
-            "matches": ["https://www.youtube.com/feed/subscriptions"],
+            "matches": ["https://www.youtube.com/feed/subscriptions","https://www.youtube.com/"],
             "css": ["/libraries/bootstrap.min.css", "expand.css"],
             "js": ["/libraries/jquery.min.js","/libraries/bootstrap.min.js","expand.js"]
         }
