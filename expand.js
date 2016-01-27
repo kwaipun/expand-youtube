@@ -22,16 +22,20 @@
     }
 
     function openVideo(elem,player){
+        var centerPosition = {top: (player.offset().top + 25), left: ($(document).width() / 4)};
         var videoLink = elem.find('.yt-uix-sessionlink.spf-link');
         var embedUrl = 'https://www.youtube.com/embed/' + (videoLink.attr('href')).substring(9) + '?autoplay=1';
         var embed = '<iframe class="embed-frame" type="text/html" width="640" height="390" src="'+ embedUrl +'"frameborder="0" allowfullscreen/>';
         if (clicked){
             clicked = false;
+            player[0].style.height = '20px';
             player.empty();
             player.append('Expand');
         } else{
             clicked = true;
+            player[0].style.height = '400px';
             player.append(embed);
+            $(player.children()[0]).offset(centerPosition);
         }
     }
 })();

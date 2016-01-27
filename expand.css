@@ -1,8 +1,7 @@
 .btn {
-    position:relative;
+    width: 100%;
 }
 .embed-frame {
-    position:relative;
+    position:absolute;
     padding-top: 20px;
-    margin: 0 auto;
 }
