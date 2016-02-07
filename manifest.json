@@ -3,7 +3,7 @@
 
     "name": "expand-youtube",
     "description":"expand youtube videos to view from the subscriptions page",
-    "version":"0.1.1",
+    "version":"0.1.2",
     "author":"Christopher Kwai-Pun",
     "icons": {
         "24":"/assets/icons/icon1x.png",
