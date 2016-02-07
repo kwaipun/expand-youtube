@@ -4,9 +4,24 @@
 (function () {
     'use strict';
 
-    var $link = $('.yt-lockup-dismissable');
-    var $menu = $('.thumb-menu');
+    MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
+    var observer = new MutationObserver(function(mutations, observer) {
+        for (var x in mutations){
+            // console.log(mutations[x].attributeName);
+            if (mutations[x].attributeName == 'class'){
+                // console.log(typeof(mutations[x].target));
+                // console.log(mutations[x].target);
+            }
+        }
+    });
+
+    observer.observe(document, {
+      subtree: true,
+      attributes: true
+    });
+
+    var $link = $('.yt-lockup-dismissable');
     var i = 0;
     var clicked = false;
 
